@@ -23,7 +23,7 @@
  </style>
  
  
- <!DOCTYPE html> 
+ <!DOCTYPE html>
  <html lang="en">
  <head>
     <meta charset="UTF-8">
@@ -158,9 +158,8 @@
                             </td>
        </tr>
     </table>
-    <center>
+
     <button onclick="submiter()">Submit</button>
-     </center>
  </body>
  </html> 
 
@@ -228,12 +227,7 @@
                 yellowResult += 1;
             }
         }
-        alert("you are : \n" + blueResult + " blue\n"+
-                orangeResult + " orange\n"+
-                greenResult + " green\n"+
-                yellowResult + " yellow\n");
-      alert("The URL of this page is: " + window.location.href);
-         
+      
+        window.open("result.htm?b="+blueResult+"&o="+orangeResult+"&g="+greenResult+"&y="+yellowResult, "_blank");
      }
-     
  </script>
