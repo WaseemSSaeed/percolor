@@ -1,0 +1,43 @@
+body{
+    background-color: rgba(32, 32, 32, 0.918);
+}
+#container{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+}
+
+.highcharts-3d-side{
+    animation: anmo 1s alternate infinite;
+    stroke: rgba(165, 196, 126, 0.548);
+}
+@keyframes anmo{
+    100%{
+        stroke-width: 10px;
+    }
+    0%{
+        stroke-width: 0px;
+    }
+}
+
+svg{
+    animation: anmo2 4s alternate, anmo3 1s alternate infinite;
+    animation-delay: -0.5s;
+    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+@keyframes anmo2{
+    100%{
+        transform: rotate3d(0, 0, 0, 0turn);
+    }
+    0%{
+        transform: rotate3d(0, -2, -1, -1turn);
+    }
+}
+@keyframes anmo3{
+    100%{
+        margin-top: 10px;
+    }
+    0%{
+        margin-top: 0px;
+    }
+}
