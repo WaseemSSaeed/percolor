@@ -19,11 +19,12 @@
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 <script src="https://code.highcharts.com/highcharts-3d.js"></script>
-
-
-<figure class="highcharts-figure">
-    <div id="container"></div>
-</figure>
+<link rel="stylesheet" href="./style.css">
+<body>
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+    </figure>
+</body>
 
 <script>
     Highcharts.chart('container', {
@@ -32,14 +33,19 @@
             plotBorderWidth: null,
             plotShadow: false,
             type: 'pie',
+            backgroundColor: 'transparent',
             options3d: {
                 enabled: true,
-                alpha: 45,
-                beta: 0
+                alpha: 70,
+                beta: 0,
+                viewDistance: 100
             }
         },
         title: {
-            text: 'Your Colour !'
+            text: 'Your Colour !',
+            style:{
+                color: 'white'
+            }
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -58,7 +64,8 @@
                     enabled: true,
                     format: '{point.name}</b>: {point.percentage:.1f} %',
                     style:{
-                        fontSize: '20px'
+                        fontSize: '20px',
+                        color: 'white'
                     }
                 }
             }
@@ -69,19 +76,25 @@
                 data: [{
                     name: persons[0],
                     y: values[0],
-                    color: persons[0]
+                    color: 'rgba(0, 0, 255, 0.5)',
+                    sliced: true
                 }, {
                     name: persons[1],
                     y: values[1],
-                    color: persons[1]
+                    color: 'rgba(255, 166, 0, 0.699)',
+                    sliced: true
                 }, {
                     name: persons[2],
                     y: values[2],
-                    color: persons[2]
+                    color: 'rgba(0, 166, 0, 0.699)',
+                    sliced: true
                 }, {
                     name: persons[3],
                     y: values[3],
-                    color: persons[3]
+                    color: 'rgba(255, 255, 0, 0.699)',
+                    sliced: true
                     }]
         }]});
+
+        //document.getElementsByClassName("highcharts-3d-side").classList += "newClass";
 </script>
