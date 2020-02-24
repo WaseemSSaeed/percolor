@@ -1,0 +1,87 @@
+<script>
+    var its = window.location.href;
+    var getRequest = its.split("?")[1]; //b=1&o=0&g=1&y=1
+    var gets = getRequest.split("&");
+    var result = "";
+    var persons = ["blue","orange","green","yellow"];
+    var values = [0,0,0,0];
+
+    var i = 0;
+    for(i==1;i<values.length;i++){
+        tValue = gets[i].split("=")[1];
+        values[i] = (Number(tValue)*54)/100;
+        result += (Number(tValue)*54)/100+"\n";
+    }
+</script>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+
+
+<figure class="highcharts-figure">
+    <div id="container"></div>
+</figure>
+
+<script>
+    Highcharts.chart('container', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie',
+            options3d: {
+                enabled: true,
+                alpha: 45,
+                beta: 0
+            }
+        },
+        title: {
+            text: 'Your Colour !'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        accessibility: {
+            point: {
+                valueSuffix: '%'
+            }
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                depth: 35,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}</b>: {point.percentage:.1f} %',
+                    style:{
+                        fontSize: '20px'
+                    }
+                }
+            }
+        },
+        series: [{
+                name: 'Brands',
+                colorByPoint: false,
+                data: [{
+                    name: persons[0],
+                    y: values[0],
+                    color: persons[0]
+                }, {
+                    name: persons[1],
+                    y: values[1],
+                    color: persons[1]
+                }, {
+                    name: persons[2],
+                    y: values[2],
+                    color: persons[2]
+                }, {
+                    name: persons[3],
+                    y: values[3],
+                    color: persons[3]
+                    }]
+        }]});
+</script>
