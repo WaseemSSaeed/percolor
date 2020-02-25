@@ -11,11 +11,12 @@
       font-size: 25px;
       cursor: pointer;
       transition: 1s;
-      margin-left: 45%;
+      position: absolute;
+      left: 45vw;
       margin-top: -30px;
    }
    button:hover{
-      margin-top: -35px;
+      margin-top: -5px;
       transition: 0.5s;
       border-radius: 20px;
    }
@@ -53,6 +54,7 @@
        font-size: 20px;
        transition: 1s;
        cursor: pointer;
+       padding-bottom: 6px;
     }
     input:hover{
       margin-left: 10px;
@@ -61,13 +63,18 @@
     }
     .pX{
        color: white;
-       height: 30px;
-       background-color: blueviolet;
+       height: 40px;
+       line-height: 40px;
+       background: linear-gradient(0.25turn, rgba(80, 0, 226, 0.367),rgba(80, 0, 226, 0.767),rgba(80, 10, 226, 0.767),rgba(8, 10, 22, 0.567),rgba(8, 10, 22, 0.567),rgba(8, 10, 25, 0.167));
+       border-top-right-radius: 30px;
+       border-bottom-left-radius: 30px;
+       padding-left: 10px;
        margin-top: 0px;
     }
     span{
        margin-left: 40px;
        height: 35px;
+       line-height: 30px;
        width: fit-content;
        position: absolute;
        color: white;
@@ -84,189 +91,195 @@
     <meta id="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
  </head>
- <body>
-    <table><!--
-       <tr>
-          <td style="text-align: center; background-color: blue; color: white">Checklist1</td>
-          <td style="text-align: center; background-color: green; color: white">Checklist2</td>
-       </tr>-->
-       <tr>
-          <td>
+
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ <body><!--
+       <div>
+          <div style="text-align: center; background-color: blue; color: white">Checklist1</div>
+          <div style="text-align: center; background-color: green; color: white">Checklist2</div>
+       </div>-->
+       <div class="row">
+          <div class="col col-lg-3  col-md-4 col-sm-10">
                <p class="pX" id="Your Strength">your strength ( 5 remaining)</p>
                      <input onclick="checker('prop1','Your Strength')" type="button" id="prop1" name="listning">
-                      <span onclick="checker('prop1','Your Strength')" name="vehicle11"> listning </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop1','Your Strength')" name="vehicle11"> listning </span><p style="height: 20px"></p>
                       
                       <input onclick="checker('prop2','Your Strength')" type="button" id="prop2" name="empathy">
-                      <span onclick="checker('prop2','Your Strength')" name="vehicle12"> empathy </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop2','Your Strength')" name="vehicle12"> empathy </span><p style="height: 20px"></p>
                        
                       <input onclick="checker('prop3','Your Strength')" type="button" id="prop3" name="understanding">
-                      <span onclick="checker('prop3','Your Strength')" name="vehicle13"> understanding </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop3','Your Strength')" name="vehicle13"> understanding </span><p style="height: 20px"></p>
                       
                       <input onclick="checker('prop4','Your Strength')" type="button" id="prop4" name="creativity" >
-                      <span onclick="checker('prop4','Your Strength')" name="vehicle14"> creativity </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop4','Your Strength')" name="vehicle14"> creativity </span><p style="height: 20px"></p>
                       
                       <input onclick="checker('prop5','Your Strength')" type="button" id="prop5" name="thinking">
-                      <span onclick="checker('prop5','Your Strength')" name="vehicle15"> thinking </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop5','Your Strength')" name="vehicle15"> thinking </span><p style="height: 20px"></p>
                       
                       <input onclick="checker('prop6','Your Strength')" type="button" id="prop6" name="analyzing">
-                      <span onclick="checker('prop6','Your Strength')" name="vehicle16"> analyzing </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop6','Your Strength')" name="vehicle16"> analyzing </span><p style="height: 20px"></p>
                        
                       <input onclick="checker('prop7','Your Strength')" type="button" id="prop7" name="research">
-                      <span onclick="checker('prop7','Your Strength')" name="vehicle17"> research </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop7','Your Strength')" name="vehicle17"> research </span><p style="height: 20px"></p>
                       
                       <input onclick="checker('prop8','Your Strength')" type="button" id="prop8" name="free thinking">
-                      <span onclick="checker('prop8','Your Strength')" onclick="checker('prop8')" name="vehicle18"> free thinking </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop8','Your Strength')" onclick="checker('prop8')" name="vehicle18"> free thinking </span><p style="height: 20px"></p>
                       
                       <input onclick="checker('prop9','Your Strength')" type="button" id="prop9" name="can make anything fun">
-                      <span onclick="checker('prop9','Your Strength')" name="vehicle19"> can make anything fun </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop9','Your Strength')" name="vehicle19"> can make anything fun </span><p style="height: 20px"></p>
                       
                       <input onclick="checker('prop10','Your Strength')" type="button" id="prop10" name="high energy">
-                      <span onclick="checker('prop10','Your Strength')" name="vehicle110"> high energy </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop10','Your Strength')" name="vehicle110"> high energy </span><p style="height: 20px"></p>
                       
                       <input onclick="checker('prop11','Your Strength')" type="button" id="prop11" name="visionary">
-                      <span onclick="checker('prop11','Your Strength')" name="vehicle111"> visionary </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop11','Your Strength')" name="vehicle111"> visionary </span><p style="height: 20px"></p>
                        
                       <input onclick="checker('prop12','Your Strength')" type="button" id="prop12" name="organizing">
-                      <span onclick="checker('prop12','Your Strength')" name="vehicle112"> organizing </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop12','Your Strength')" name="vehicle112"> organizing </span><p style="height: 20px"></p>
                       
                       <input onclick="checker('prop13','Your Strength')" type="button" id="prop13" name="planning">
-                      <span onclick="checker('prop13','Your Strength')" name="vehicle113"> planning </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop13','Your Strength')" name="vehicle113"> planning </span><p style="height: 20px"></p>
                       
                       <input onclick="checker('prop14','Your Strength')" type="button" id="prop14" name="rliability">
-                      <span onclick="checker('prop14','Your Strength')" name="vehicle114"> rliability </span><p style="height: 15px"></p>
-                            </td>
-          <td>
-             <p class="pX" id="Your Needs" style="margin-top: -40px;">your needs ( 5 remaining)</p>
+                      <span onclick="checker('prop14','Your Strength')" name="vehicle114"> rliability </span><p style="height: 20px"></p>
+                            </div>
+               <div class="col col-lg-3  col-md-4 col-sm-10">
+                  <p class="pX" id="Your Needs">your needs ( 5 remaining)</p>
                      <input onclick="checker('prop15','Your Needs')" type="button" id="prop15" name="kindness">
-                      <span onclick="checker('prop15','Your Needs')" name="vehicle115"> kindness </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop15','Your Needs')" name="vehicle115"> kindness </span><p style="height: 20px"></p>
                      
                       <input onclick="checker('prop16','Your Needs')" type="button" id="prop16" name="sensitivity">
-                      <span onclick="checker('prop16','Your Needs')" name="vehicle116"> sensitivity </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop16','Your Needs')" name="vehicle116"> sensitivity </span><p style="height: 20px"></p>
                      
                       <input onclick="checker('prop17','Your Needs')" type="button" id="prop17" name="genuineness">
-                      <span onclick="checker('prop17','Your Needs')" name="vehicle117"> genuineness </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop17','Your Needs')" name="vehicle117"> genuineness </span><p style="height: 20px"></p>
                      
                       <input onclick="checker('prop18','Your Needs')" type="button" id="prop18" name="process time">
-                      <span onclick="checker('prop18','Your Needs')" name="vehicle118"> process time </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop18','Your Needs')" name="vehicle118"> process time </span><p style="height: 20px"></p>
                      
                       <input onclick="checker('prop19','Your Needs')" type="button" id="prop19" name="respect for intelligence">
-                      <span onclick="checker('prop19','Your Needs')" name="vehicle119"> respect for intelligence </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop19','Your Needs')" name="vehicle119"> respect for intelligence </span><p style="height: 20px"></p>
                      
                       <input onclick="checker('prop20','Your Needs')" type="button" id="prop20" name="autonomy">
-                      <span onclick="checker('prop20','Your Needs')" name="vehicle120"> autonomy </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop20','Your Needs')" name="vehicle120"> autonomy </span><p style="height: 20px"></p>
                      
                       <input onclick="checker('prop21','Your Needs')" type="button" id="prop21" name="unstructured environment">
-                      <span onclick="checker('prop21','Your Needs')" name="vehicle121"> unstructured environment </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop21','Your Needs')" name="vehicle121"> unstructured environment </span><p style="height: 20px"></p>
                                        
                       <input onclick="checker('prop22','Your Needs')" type="button" id="prop22" name="freedom">
-                      <span onclick="checker('prop22','Your Needs')" name="vehicle122"> freedom </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop22','Your Needs')" name="vehicle122"> freedom </span><p style="height: 20px"></p>
                                        
                       <input onclick="checker('prop23','Your Needs')" type="button" id="prop23" name="fun!">
-                      <span onclick="checker('prop23','Your Needs')" name="vehicle123"> fun! </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop23','Your Needs')" name="vehicle123"> fun! </span><p style="height: 20px"></p>
                                         
                       <input onclick="checker('prop24','Your Needs')" type="button" id="prop24" name="structure">
-                      <span onclick="checker('prop24','Your Needs')" name="vehicle124"> structure </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop24','Your Needs')" name="vehicle124"> structure </span><p style="height: 20px"></p>
                                        
                       <input onclick="checker('prop25','Your Needs')" type="button" id="prop25" name="planning">
-                      <span onclick="checker('prop25','Your Needs')" name="vehicle125"> planning </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop25','Your Needs')" name="vehicle125"> planning </span><p style="height: 20px"></p>
                                         
                       <input onclick="checker('prop26','Your Needs')" type="button" id="prop26" name="gradual change">
-                      <span onclick="checker('prop26','Your Needs')" name="vehicle1"> gradual change </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop26','Your Needs')" name="vehicle1"> gradual change </span><p style="height: 20px"></p>
                                         
                       <input onclick="checker('prop27','Your Needs')" type="button" id="prop27" name="control">
-                      <span onclick="checker('prop27','Your Needs')" name="vehicle1"> control </span><p style="height: 15px"></p>
-                            </td><!--
-          <td style="text-align: center; background-color: red; color: white">Checklist3</td>
-          <td style="text-align: center; background-color: rgb(180, 180, 7); color: white">Checklist4</td>
-       </tr>-->
-          <td>
-                <p class="pX" id="Your Values" style="margin-top: -40px;">your values ( 5 remaining)</p>      
+                      <span onclick="checker('prop27','Your Needs')" name="vehicle1"> control </span><p style="height: 20px"></p>
+                            </div><!--
+          <div style="text-align: center; background-color: red; color: white">Checklist3</div>
+          <div style="text-align: center; background-color: rgb(180, 180, 7); color: white">Checklist4</div>
+       </div>-->
+       <div class="col col-lg-3  col-md-4 col-sm-10">
+
+                <p class="pX" id="Your Values">your values ( 5 remaining)</p>      
                      <input onclick="checker('prop28','Your Values')" type="button" id="prop28" name="family and relationships">
-                      <span onclick="checker('prop28','Your Values')" name="vehicle1"> family and relationships </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop28','Your Values')" name="vehicle1"> family and relationships </span><p style="height: 20px"></p>
                       
                       <input onclick="checker('prop29','Your Values')" type="button" id="prop29"  name="spirtuality">
-                      <span onclick="checker('prop29','Your Values')" name="vehicle1"> spirtuality </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop29','Your Values')" name="vehicle1"> spirtuality </span><p style="height: 20px"></p>
                       
                       <input onclick="checker('prop30','Your Values')" type="button" id="prop30"  name="the little things in life">
-                      <span onclick="checker('prop30','Your Values')" name="vehicle1"> the little things in life </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop30','Your Values')" name="vehicle1"> the little things in life </span><p style="height: 20px"></p>
                       
                       <input onclick="checker('prop31','Your Values')" type="button" id="prop31"  name="independence">
-                      <span onclick="checker('prop31','Your Values')" name="vehicle1"> independence </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop31','Your Values')" name="vehicle1"> independence </span><p style="height: 20px"></p>
                                        
                       <input onclick="checker('prop32','Your Values')" type="button" id="prop32"  name="facts and data">
-                      <span onclick="checker('prop32','Your Values')" name="vehicle1"> facts and data </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop32','Your Values')" name="vehicle1"> facts and data </span><p style="height: 20px"></p>
                                         
                       <input onclick="checker('prop33','Your Values')" type="button" id="prop33"  name="intelligence">
-                      <span onclick="checker('prop33','Your Values')" name="vehicle1"> intelligence </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop33','Your Values')" name="vehicle1"> intelligence </span><p style="height: 20px"></p>
                                         
                       <input onclick="checker('prop34','Your Values')" type="button" id="prop34"  name="sarcasm(dry humor)">
-                      <span onclick="checker('prop34','Your Values')" name="vehicle1"> sarcasm(dry humor) </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop34','Your Values')" name="vehicle1"> sarcasm(dry humor) </span><p style="height: 20px"></p>
                                         
                       <input onclick="checker('prop35','Your Values')" type="button" id="prop35"  name="freedom">
-                      <span onclick="checker('prop35','Your Values')" name="vehicle1"> freedom </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop35','Your Values')" name="vehicle1"> freedom </span><p style="height: 20px"></p>
                                         
                       <input onclick="checker('prop36','Your Values')" type="button" id="prop36"  name="activity">
-                      <span onclick="checker('prop36','Your Values')" name="vehicle1"> activity </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop36','Your Values')" name="vehicle1"> activity </span><p style="height: 20px"></p>
                                         
                       <input onclick="checker('prop37','Your Values')" type="button" id="prop37"  name="adventure">
-                      <span onclick="checker('prop37','Your Values')" name="vehicle1"> adventure </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop37','Your Values')" name="vehicle1"> adventure </span><p style="height: 20px"></p>
                                         
                       <input onclick="checker('prop38','Your Values')" type="button" id="prop38"  name="structure">
-                      <span onclick="checker('prop38','Your Values')" name="vehicle1"> structure </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop38','Your Values')" name="vehicle1"> structure </span><p style="height: 20px"></p>
                                        
                       <input onclick="checker('prop39','Your Values')" type="button" id="prop39"  name="loyalty">
-                      <span onclick="checker('prop39','Your Values')" name="vehicle1"> loyalty </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop39','Your Values')" name="vehicle1"> loyalty </span><p style="height: 20px"></p>
                                         
                       <input onclick="checker('prop40','Your Values')" type="button" id="prop40"  name="honesty">
-                      <span onclick="checker('prop40','Your Values')" name="vehicle1"> honesty </span><p style="height: 15px"></p>
-                            </td>
-          <td>
+                      <span onclick="checker('prop40','Your Values')" name="vehicle1"> honesty </span><p style="height: 20px"></p>
+                            </div>
+         
+             <div class="col col-lg-3  col-md-4 col-sm-10">
+
              <p class="pX" id="Your Joys">your joys ( 5 remaining)</p>
                                
                      <input onclick="checker('prop41','Your Joys')" type="button" id="prop41" name="family">
-                     <span onclick="checker('prop41','Your Joys')" name="vehicle1"> family </span><p style="height: 15px"></p>
+                     <span onclick="checker('prop41','Your Joys')" name="vehicle1"> family </span><p style="height: 20px"></p>
                      
                      <input onclick="checker('prop42','Your Joys')" type="button" id="prop42"  name="doing for others">
-                      <span onclick="checker('prop42','Your Joys')" name="vehicle1"> doing for others </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop42','Your Joys')" name="vehicle1"> doing for others </span><p style="height: 20px"></p>
                      
                       <input onclick="checker('prop43','Your Joys')" type="button" id="prop43"  name="being understod">
-                      <span onclick="checker('prop43','Your Joys')" name="vehicle1"> being understod </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop43','Your Joys')" name="vehicle1"> being understod </span><p style="height: 20px"></p>
                      
                       <input onclick="checker('prop44','Your Joys')" type="button" id="prop44"  name="thinking">
-                      <span onclick="checker('prop44','Your Joys')" name="vehicle1"> thinking </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop44','Your Joys')" name="vehicle1"> thinking </span><p style="height: 20px"></p>
                      
                       <input onclick="checker('prop45','Your Joys')" type="button" id="prop45"  name="analyzing">
-                      <span onclick="checker('prop45','Your Joys')" name="vehicle1"> analyzing </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop45','Your Joys')" name="vehicle1"> analyzing </span><p style="height: 20px"></p>
                      
                       <input onclick="checker('prop46','Your Joys')" type="button" id="prop46"  name="sarcasm">
-                      <span onclick="checker('prop46','Your Joys')" name="vehicle1"> sarcasm </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop46','Your Joys')" name="vehicle1"> sarcasm </span><p style="height: 20px"></p>
                      
                       <input onclick="checker('prop47','Your Joys')" type="button" id="prop47"  name="having the answers">
-                      <span onclick="checker('prop47','Your Joys')" name="vehicle1"> having the answers </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop47','Your Joys')" name="vehicle1"> having the answers </span><p style="height: 20px"></p>
                      
                       <input onclick="checker('prop48','Your Joys')" type="button" id="prop48"  name="doing">
-                      <span onclick="checker('prop48','Your Joys')" name="vehicle1"> doing </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop48','Your Joys')" name="vehicle1"> doing </span><p style="height: 20px"></p>
                      
                       <input onclick="checker('prop49','Your Joys')" type="button" id="prop49"  name="creating">
-                      <span onclick="checker('prop49','Your Joys')" name="vehicle1"> creating </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop49','Your Joys')" name="vehicle1"> creating </span><p style="height: 20px"></p>
                      
                       <input onclick="checker('prop50','Your Joys')" type="button" id="prop50"  name="making things happen">
-                      <span onclick="checker('prop50','Your Joys')" name="vehicle1"> making things happen </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop50','Your Joys')" name="vehicle1"> making things happen </span><p style="height: 20px"></p>
                      
                       <input onclick="checker('prop51','Your Joys')" type="button" id="prop51"  name="having fun">
-                      <span onclick="checker('prop51','Your Joys')" name="vehicle1"> having fun </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop51','Your Joys')" name="vehicle1"> having fun </span><p style="height: 20px"></p>
                      
                       <input onclick="checker('prop52','Your Joys')" type="button" id="prop52"  name="structure">
-                      <span onclick="checker('prop52','Your Joys')" name="vehicle1"> structure </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop52','Your Joys')" name="vehicle1"> structure </span><p style="height: 20px"></p>
                      
                       <input onclick="checker('prop53','Your Joys')" type="button" id="prop53"  name="planning">
-                      <span onclick="checker('prop53','Your Joys')" name="vehicle1"> planning </span><p style="height: 15px"></p>
+                      <span onclick="checker('prop53','Your Joys')" name="vehicle1"> planning </span><p style="height: 20px"></p>
                      
                       <input onclick="checker('prop54','Your Joys')" type="button" id="prop54"  name="task accomplishment">
-                      <span onclick="checker('prop54','Your Joys')" name="vehicle1"> task accomplishment </span><p style="height: 15px"></p>
-                            </td>
-       </tr>
-    </table>
+                      <span onclick="checker('prop54','Your Joys')" name="vehicle1"> task accomplishment </span><p style="height: 20px"></p>
+                            </div>
+       </div>
 
     <button onclick="submiter()">Try !</button>
  </body>
@@ -349,7 +362,7 @@
    var rmValues = 5;
    var rmJoys = 5;
     function checker(ider,typer){
-      if(document.getElementById(ider).value == 'y'){
+      if(document.getElementById(ider).value == '|'){
          if(typer == 'Your Joys'){
             rmJoys += 1;
             document.getElementById('Your Joys').innerHTML = typer + ' (' + (rmJoys)+' remaining)';
@@ -379,7 +392,7 @@
             if(rmJoys!=0){
                rmJoys -= 1;
                document.getElementById('Your Joys').innerHTML = typer + ' (' + (rmJoys)+' remaining)';
-               document.getElementById(ider).value = 'y';
+               document.getElementById(ider).value = '|';
                document.getElementById(ider).style.backgroundColor = 'royalblue';
             }
          }
@@ -387,7 +400,7 @@
             if(rmValues!=0){
                rmValues -= 1;
                document.getElementById('Your Values').innerHTML = typer + ' (' + (rmValues)+' remaining)';
-               document.getElementById(ider).value = 'y';
+               document.getElementById(ider).value = '|';
                document.getElementById(ider).style.backgroundColor = 'royalblue';
             }
          }
@@ -395,7 +408,7 @@
             if(rmNeeds!=0){
                rmNeeds -= 1;
                document.getElementById('Your Needs').innerHTML = typer + ' (' + (rmNeeds)+' remaining)';
-               document.getElementById(ider).value = 'y';
+               document.getElementById(ider).value = '|';
                document.getElementById(ider).style.backgroundColor = 'royalblue';
             }
          }
@@ -403,7 +416,7 @@
             if(rmStrength!=0){
                rmStrength -= 1;
                document.getElementById('Your Strength').innerHTML = typer + ' (' + (rmStrength)+' remaining)';
-               document.getElementById(ider).value = 'y';
+               document.getElementById(ider).value = '|';
                document.getElementById(ider).style.backgroundColor = 'royalblue';
             }
          }
@@ -411,7 +424,7 @@
     }
 
     function isChecked(ider){
-      if(document.getElementById(ider).value == 'y'){
+      if(document.getElementById(ider).value == '|'){
          return true;
       } else {
          return false;
