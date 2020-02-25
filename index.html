@@ -1,10 +1,34 @@
 
 <style>
+   button{
+      outline: none;
+      border: none;
+      padding: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      background-color: royalblue;
+      color: white;
+      font-size: 25px;
+      cursor: pointer;
+      transition: 1s;
+      margin-left: 45%;
+   }
+   button:hover{
+      margin-top: -5px;
+      transition: 0.5s;
+      border-radius: 20px;
+   }
+   body{
+      background: linear-gradient(rgba(0, 0, 0, 0.356),rgba(0, 0, 0, 0.562),rgba(0, 0, 0, 0.397)), url(./4k-wallpaper-adorable-blur-boy-1148998.jpg);
+      background-size: cover;
+      background-position-y: -150px;
+      background-blend-mode: darken;
+   }
     table, td, tr{
        border:  none;
        padding: 10px;
-       background-color: white;
-       font-size: 20px;
+       background-color: transparent;
+       font-size: 18px;
     }
     table{
        background-color: none;
@@ -14,11 +38,30 @@
        font-size: 25px;
     }
     input{
-       width: 20px;
-       height: 20px;
+       height: 35px;
+       border-radius: 20px;
        border: none;
        outline: none;
-       background-color: teal;
+       position: absolute;
+       background-color: rgba(128, 128, 128, 0.755);
+       color: white;
+       width: 300px;
+       text-align: left;
+       font-size: 20px;
+       transition: 1s;
+    }
+    input:hover{
+      margin-left: 10px;
+      transition: 1s;
+      background-color: royalblue;
+    }
+    span{
+       margin-left: 40px;
+       height: 35px;
+       width: fit-content;
+       position: absolute;
+       color: white;
+       z-index: 1;
     }
  </style>
  
@@ -38,123 +81,136 @@
        </tr>-->
        <tr>
           <td>
-                                  <input type="checkbox" id="prop1" name="listning">
-                      <label name="vehicle11"> listning </label><br>
-                                        <input type="checkbox" id="prop2" name="empathy">
-                      <label name="vehicle12"> empathy </label><br>
-                                        <input type="checkbox" id="prop3" name="understanding">
-                      <label name="vehicle13"> understanding </label><br>
-                                        <input type="checkbox" id="prop4" name="creativity" >
-                      <label name="vehicle14"> creativity </label><br>
-                                        <input type="checkbox" id="prop5" name="thinking">
-                      <label name="vehicle15"> thinking </label><br>
-                                        <input type="checkbox" id="prop6" name="analyzing">
-                      <label name="vehicle16"> analyzing </label><br>
-                                        <input type="checkbox" id="prop7" name="research">
-                      <label name="vehicle17"> research </label><br>
-                                        <input type="checkbox" id="prop8" name="free thinking">
-                      <label name="vehicle18"> free thinking </label><br>
-                                        <input type="checkbox" id="prop9" name="can make anything fun">
-                      <label name="vehicle19"> can make anything fun </label><br>
-                                        <input type="checkbox" id="prop10" name="high energy">
-                      <label name="vehicle110"> high energy </label><br>
-                                        <input type="checkbox" id="prop11" name="visionary">
-                      <label name="vehicle111"> visionary </label><br>
-                                        <input type="checkbox" id="prop12" name="organizing">
-                      <label name="vehicle112"> organizing </label><br>
-                                        <input type="checkbox" id="prop13" name="planning">
-                      <label name="vehicle113"> planning </label><br>
-                                        <input type="checkbox" id="prop14" name="rliability">
-                      <label name="vehicle114"> rliability </label><br>
+                     <input onclick="checker('prop1')" type="button" id="prop1" name="listning">
+                      <span onclick="checker('prop1')" name="vehicle11"> listning </span><p style="height: 15px"></p>
+                      
+                      <input onclick="checker('prop2')" type="button" id="prop2" name="empathy">
+                      <span onclick="checker('prop2')" name="vehicle12"> empathy </span><p style="height: 15px"></p>
+                       
+                      <input onclick="checker('prop3')" type="button" id="prop3" name="understanding">
+                      <span onclick="checker('prop3')" name="vehicle13"> understanding </span><p style="height: 15px"></p>
+                      
+                      <input onclick="checker('prop4')" type="button" id="prop4" name="creativity" >
+                      <span onclick="checker('prop4')" name="vehicle14"> creativity </span><p style="height: 15px"></p>
+                      
+                      <input onclick="checker('prop5')" type="button" id="prop5" name="thinking">
+                      <span onclick="checker('prop5')" name="vehicle15"> thinking </span><p style="height: 15px"></p>
+                      
+                      <input onclick="checker('prop6')" type="button" id="prop6" name="analyzing">
+                      <span onclick="checker('prop6')" name="vehicle16"> analyzing </span><p style="height: 15px"></p>
+                       
+                      <input onclick="checker('prop7')" type="button" id="prop7" name="research">
+                      <span onclick="checker('prop7')" name="vehicle17"> research </span><p style="height: 15px"></p>
+                      
+                      <input onclick="checker('prop8')" type="button" id="prop8" name="free thinking">
+                      <span onclick="checker('prop8')" onclick="checker('prop8')" name="vehicle18"> free thinking </span><p style="height: 15px"></p>
+                      
+                      <input onclick="checker('prop9')" type="button" id="prop9" name="can make anything fun">
+                      <span onclick="checker('prop9')" name="vehicle19"> can make anything fun </span><p style="height: 15px"></p>
+                      
+                      <input onclick="checker('prop10')" type="button" id="prop10" name="high energy">
+                      <span onclick="checker('prop10')" name="vehicle110"> high energy </span><p style="height: 15px"></p>
+                      
+                      <input onclick="checker('prop11')" type="button" id="prop11" name="visionary">
+                      <span onclick="checker('prop11')" name="vehicle111"> visionary </span><p style="height: 15px"></p>
+                       
+                      <input onclick="checker('prop12')" type="button" id="prop12" name="organizing">
+                      <span onclick="checker('prop12')" name="vehicle112"> organizing </span><p style="height: 15px"></p>
+                      
+                      <input onclick="checker('prop13')" type="button" id="prop13" name="planning">
+                      <span onclick="checker('prop13')" name="vehicle113"> planning </span><p style="height: 15px"></p>
+                      
+                      <input onclick="checker('prop14')" type="button" id="prop14" name="rliability">
+                      <span onclick="checker('prop14')" name="vehicle114"> rliability </span><p style="height: 15px"></p>
                             </td>
           <td>
-                               <input type="checkbox" id="prop15" name="kindness">
-                      <label name="vehicle115"> kindness </label><br>
-                                        <input type="checkbox" id="prop16" name="sensitivity">
-                      <label name="vehicle116"> sensitivity </label><br>
-                                        <input type="checkbox" id="prop17" name="genuineness">
-                      <label name="vehicle117"> genuineness </label><br>
-                                        <input type="checkbox" id="prop18" name="process time">
-                      <label name="vehicle118"> process time </label><br>
-                                        <input type="checkbox" id="prop19" name="respect for intelligence">
-                      <label name="vehicle119"> respect for intelligence </label><br>
-                                        <input type="checkbox" id="prop20" name="autonomy">
-                      <label name="vehicle120"> autonomy </label><br>
-                                        <input type="checkbox" id="prop21" name="unstructured environment">
-                      <label name="vehicle121"> unstructured environment </label><br>
-                                        <input type="checkbox" id="prop22" name="freedom">
-                      <label name="vehicle122"> freedom </label><br>
-                                        <input type="checkbox" id="prop23" name="fun!">
-                      <label name="vehicle123"> fun! </label><br>
-                                        <input type="checkbox" id="prop24" name="structure">
-                      <label name="vehicle124"> structure </label><br>
-                                        <input type="checkbox" id="prop25" name="planning">
-                      <label name="vehicle125"> planning </label><br>
-                                        <input type="checkbox" id="prop26" name="gradual introduction to change">
-                      <label name="vehicle1"> gradual introduction to change </label><br>
-                                        <input type="checkbox" id="prop27" name="control">
-                      <label name="vehicle1"> control </label><br>
+                               <input onclick="checker('prop15')" type="button" id="prop15" name="kindness">
+                      <span onclick="checker('prop15')" name="vehicle115"> kindness </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop16')" type="button" id="prop16" name="sensitivity">
+                      <span onclick="checker('prop16')" name="vehicle116"> sensitivity </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop17')" type="button" id="prop17" name="genuineness">
+                      <span onclick="checker('prop17')" name="vehicle117"> genuineness </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop18')" type="button" id="prop18" name="process time">
+                      <span onclick="checker('prop18')" name="vehicle118"> process time </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop19')" type="button" id="prop19" name="respect for intelligence">
+                      <span onclick="checker('prop19')" name="vehicle119"> respect for intelligence </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop20')" type="button" id="prop20" name="autonomy">
+                      <span onclick="checker('prop20')" name="vehicle120"> autonomy </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop21')" type="button" id="prop21" name="unstructured environment">
+                      <span onclick="checker('prop21')" name="vehicle121"> unstructured environment </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop22')" type="button" id="prop22" name="freedom">
+                      <span onclick="checker('prop22')" name="vehicle122"> freedom </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop23')" type="button" id="prop23" name="fun!">
+                      <span onclick="checker('prop23')" name="vehicle123"> fun! </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop24')" type="button" id="prop24" name="structure">
+                      <span onclick="checker('prop24')" name="vehicle124"> structure </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop25')" type="button" id="prop25" name="planning">
+                      <span onclick="checker('prop25')" name="vehicle125"> planning </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop26')" type="button" id="prop26" name="gradual change">
+                      <span onclick="checker('prop26')" name="vehicle1"> gradual change </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop27')" type="button" id="prop27" name="control">
+                      <span onclick="checker('prop27')" name="vehicle1"> control </span><p style="height: 15px"></p>
                             </td><!--
           <td style="text-align: center; background-color: red; color: white">Checklist3</td>
           <td style="text-align: center; background-color: rgb(180, 180, 7); color: white">Checklist4</td>
        </tr>-->
           <td>
-                               <input type="checkbox" id="prop28" name="family and relationships">
-                      <label name="vehicle1"> family and relationships </label><br>
-                                        <input type="checkbox" id="prop29"  name="spirtuality">
-                      <label name="vehicle1"> spirtuality </label><br>
-                                        <input type="checkbox" id="prop30"  name="the little things in life">
-                      <label name="vehicle1"> the little things in life </label><br>
-                                        <input type="checkbox" id="prop31"  name="independence">
-                      <label name="vehicle1"> independence </label><br>
-                                        <input type="checkbox" id="prop32"  name="facts and data">
-                      <label name="vehicle1"> facts and data </label><br>
-                                        <input type="checkbox" id="prop33"  name="intelligence">
-                      <label name="vehicle1"> intelligence </label><br>
-                                        <input type="checkbox" id="prop34"  name="sarcasm(dry humor)">
-                      <label name="vehicle1"> sarcasm(dry humor) </label><br>
-                                        <input type="checkbox" id="prop35"  name="freedom">
-                      <label name="vehicle1"> freedom </label><br>
-                                        <input type="checkbox" id="prop36"  name="activity">
-                      <label name="vehicle1"> activity </label><br>
-                                        <input type="checkbox" id="prop37"  name="adventure">
-                      <label name="vehicle1"> adventure </label><br>
-                                        <input type="checkbox" id="prop38"  name="structure">
-                      <label name="vehicle1"> structure </label><br>
-                                        <input type="checkbox" id="prop39"  name="loyalty">
-                      <label name="vehicle1"> loyalty </label><br>
-                                        <input type="checkbox" id="prop40"  name="honesty">
-                      <label name="vehicle1"> honesty </label><br>
+                               <input onclick="checker('prop28')" type="button" id="prop28" name="family and relationships">
+                      <span onclick="checker('prop28')" name="vehicle1"> family and relationships </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop29')" type="button" id="prop29"  name="spirtuality">
+                      <span onclick="checker('prop29')" name="vehicle1"> spirtuality </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop30')" type="button" id="prop30"  name="the little things in life">
+                      <span onclick="checker('prop30')" name="vehicle1"> the little things in life </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop31')" type="button" id="prop31"  name="independence">
+                      <span onclick="checker('prop31')" name="vehicle1"> independence </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop32')" type="button" id="prop32"  name="facts and data">
+                      <span onclick="checker('prop32')" name="vehicle1"> facts and data </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop33')" type="button" id="prop33"  name="intelligence">
+                      <span onclick="checker('prop33')" name="vehicle1"> intelligence </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop34')" type="button" id="prop34"  name="sarcasm(dry humor)">
+                      <span onclick="checker('prop34')" name="vehicle1"> sarcasm(dry humor) </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop35')" type="button" id="prop35"  name="freedom">
+                      <span onclick="checker('prop35')" name="vehicle1"> freedom </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop36')" type="button" id="prop36"  name="activity">
+                      <span onclick="checker('prop36')" name="vehicle1"> activity </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop37')" type="button" id="prop37"  name="adventure">
+                      <span onclick="checker('prop37')" name="vehicle1"> adventure </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop38')" type="button" id="prop38"  name="structure">
+                      <span onclick="checker('prop38')" name="vehicle1"> structure </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop39')" type="button" id="prop39"  name="loyalty">
+                      <span onclick="checker('prop39')" name="vehicle1"> loyalty </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop40')" type="button" id="prop40"  name="honesty">
+                      <span onclick="checker('prop40')" name="vehicle1"> honesty </span><p style="height: 15px"></p>
                             </td>
           <td>
-                               <input type="checkbox" id="prop41" name="family">
-                      <label name="vehicle1"> family </label><br>
-                                        <input type="checkbox" id="prop42"  name="doing for others">
-                      <label name="vehicle1"> doing for others </label><br>
-                                        <input type="checkbox" id="prop43"  name="being understod">
-                      <label name="vehicle1"> being understod </label><br>
-                                        <input type="checkbox" id="prop44"  name="thinking">
-                      <label name="vehicle1"> thinking </label><br>
-                                        <input type="checkbox" id="prop45"  name="analyzing">
-                      <label name="vehicle1"> analyzing </label><br>
-                                        <input type="checkbox" id="prop46"  name="sarcasm">
-                      <label name="vehicle1"> sarcasm </label><br>
-                                        <input type="checkbox" id="prop47"  name="having the answers">
-                      <label name="vehicle1"> having the answers </label><br>
-                                        <input type="checkbox" id="prop48"  name="doing">
-                      <label name="vehicle1"> doing </label><br>
-                                        <input type="checkbox" id="prop49"  name="creating">
-                      <label name="vehicle1"> creating </label><br>
-                                        <input type="checkbox" id="prop50"  name="making things happen">
-                      <label name="vehicle1"> making things happen </label><br>
-                                        <input type="checkbox" id="prop51"  name="having fun">
-                      <label name="vehicle1"> having fun </label><br>
-                                        <input type="checkbox" id="prop52"  name="structure">
-                      <label name="vehicle1"> structure </label><br>
-                                        <input type="checkbox" id="prop53"  name="planning">
-                      <label name="vehicle1"> planning </label><br>
-                                        <input type="checkbox" id="prop54"  name="task accomplishment">
-                      <label name="vehicle1"> task accomplishment </label><br>
+                               <input onclick="checker('prop41')" type="button" id="prop41" name="family">
+                      <span onclick="checker('prop41')" name="vehicle1"> family </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop42')" type="button" id="prop42"  name="doing for others">
+                      <span onclick="checker('prop42')" name="vehicle1"> doing for others </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop43')" type="button" id="prop43"  name="being understod">
+                      <span onclick="checker('prop43')" name="vehicle1"> being understod </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop44')" type="button" id="prop44"  name="thinking">
+                      <span onclick="checker('prop44')" name="vehicle1"> thinking </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop45')" type="button" id="prop45"  name="analyzing">
+                      <span onclick="checker('prop45')" name="vehicle1"> analyzing </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop46')" type="button" id="prop46"  name="sarcasm">
+                      <span onclick="checker('prop46')" name="vehicle1"> sarcasm </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop47')" type="button" id="prop47"  name="having the answers">
+                      <span onclick="checker('prop47')" name="vehicle1"> having the answers </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop48')" type="button" id="prop48"  name="doing">
+                      <span onclick="checker('prop48')" name="vehicle1"> doing </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop49')" type="button" id="prop49"  name="creating">
+                      <span onclick="checker('prop49')" name="vehicle1"> creating </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop50')" type="button" id="prop50"  name="making things happen">
+                      <span onclick="checker('prop50')" name="vehicle1"> making things happen </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop51')" type="button" id="prop51"  name="having fun">
+                      <span onclick="checker('prop51')" name="vehicle1"> having fun </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop52')" type="button" id="prop52"  name="structure">
+                      <span onclick="checker('prop52')" name="vehicle1"> structure </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop53')" type="button" id="prop53"  name="planning">
+                      <span onclick="checker('prop53')" name="vehicle1"> planning </span><p style="height: 15px"></p>
+                                        <input onclick="checker('prop54')" type="button" id="prop54"  name="task accomplishment">
+                      <span onclick="checker('prop54')" name="vehicle1"> task accomplishment </span><p style="height: 15px"></p>
                             </td>
        </tr>
     </table>
@@ -177,7 +233,7 @@
                     "freedom", "activity","adventure",
                     "doing", "creating", "making things happen", "having fun"];
     var yellow = [ "organizing", "planning", "rliability",
-                    "structure", "planning", "gradual introduction to change", "control",
+                    "structure", "planning", "gradual change", "control",
                     "structure", "loyalty", "honesty",
                     "structure", "planning", "task accomplishment"];
      function submiter(){
@@ -187,7 +243,7 @@
         while (i != 54){
             i+=1;
             id = "prop"+i;
-            valuer = document.getElementById(id).checked;
+            valuer = isChecked(id);
             if(valuer == 1){
                 results.push(id , valuer, document.getElementById(id).name);
             }
@@ -230,4 +286,24 @@
       
         window.open("result.htm?b="+blueResult+"&o="+orangeResult+"&g="+greenResult+"&y="+yellowResult, "_blank");
      }
+ </script>
+
+ <script>
+    function checker(ider){
+      if(document.getElementById(ider).value == 'y'){
+         document.getElementById(ider).value = '';
+         document.getElementById(ider).style.backgroundColor = 'gray';
+      } else {
+         document.getElementById(ider).value = 'y';
+         document.getElementById(ider).style.backgroundColor = 'royalblue';
+      }
+    }
+
+    function isChecked(ider){
+      if(document.getElementById(ider).value == 'y'){
+         return true;
+      } else {
+         return false;
+      }
+    }
  </script>
